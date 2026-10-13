@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1",
+    "name": "HP EliteBook 840",
+    "price": 200000,
+    "description": "Ordinateur portable HP EliteBook 840 avec écran 15 pouces, 8 Go RAM, 256 Go SSD.",
+    "imageUrl": "assets/images/hp_laptop.jpg",
+    "category": "Informatique"
+  },
+  {
+    "id": "p2",
+    "name": "Rosalba",
+    "price": 30000,
+    "description": "Lunette anti-lumière bleue pour réduire la fatigue oculaire lors de l'utilisation d'écrans.",
+    "imageUrl": "assets/images/rosalba.jpg",
+    "category": "Lunettes lumière bleue"
+  },
+  {
+    "id": "p3",
+    "name": "SHARPHY",
+    "price": 25000,
+    "description": "Montre chronographe homme luxe avec bracelet acier inoxydable.",
+    "imageUrl": "assets/images/sharphy.jpg",
+    "category": "Montres"
+  }
+]
