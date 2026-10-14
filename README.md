@@ -177,6 +177,7 @@ la testabilité ;
 la réutilisabilité du code.
 
 📂 Description des couches
+
 1. Presentation Layer
 presentation/
 
@@ -200,6 +201,7 @@ Responsabilités :
 Afficher les données
 Réagir aux actions utilisateur
 Consommer les Providers
+
 2. Application Layer
 application/
 
@@ -231,6 +233,7 @@ Responsabilités :
 Exposer les données à l'application
 Donner accès aux Notifiers
 Calculer les états dérivés
+
 3. Domain Layer
 domain/
 
@@ -250,6 +253,7 @@ Responsabilités :
 
 Définir les contrats métier
 Ne dépendre d'aucune implémentation technique
+
 4. Infrastructure Layer
 infrastructure/
 
@@ -266,6 +270,7 @@ Responsabilités :
 Lecture du JSON
 SharedPreferences
 Gestion des données locales
+
 🧩 Modèles
 Product
 
@@ -494,6 +499,7 @@ Email
 Téléphone
 Adresse
 Avatar
+
 💾 Persistance locale
 
 Les favoris sont conservés avec :
@@ -569,6 +575,45 @@ Vérification :
 
 démarrage de l'application
 chargement des widgets de base
+
+🔄 Intégration Continue (CI/CD)
+Le projet intègre un pipeline d’Intégration Continue (CI) à l’aide de GitHub Actions afin d’automatiser les contrôles qualité du projet.
+
+Pipeline CI
+Le workflow est défini dans le fichier :
+
+.github/workflows/flutter_ci.yml
+
+Déclencheurs
+
+Le pipeline s’exécute automatiquement :
+
+à chaque Push sur la branche principale (main) ;
+à chaque Pull Request vers la branche principale.
+Vérifications automatiques
+
+À chaque exécution, GitHub Actions réalise les opérations suivantes :
+
+ flutter pub get
+
+ flutter analyze
+
+ flutter test
+
+ Objectifs
+
+Le pipeline permet :
+
+de vérifier automatiquement les dépendances ;
+de détecter les erreurs de compilation ;
+d’exécuter les tests unitaires ;
+de garantir la qualité du code ;
+de prévenir les régressions.
+Technologies utilisées
+GitHub Actions
+Flutter
+Dart
+
 📚 Packages utilisés
 flutter_riverpod
 
@@ -632,6 +677,31 @@ Architecture en couches
 Gestion des états asynchrones
 Tests unitaires
 Organisation professionnelle du code
+
+✅ Tableau de conformité aux exigences
+Exigence	Statut
+Catalogue produits	✅
+Détail produit	✅
+Panier d'achat	✅
+Gestion des quantités	✅
+Suppression d'articles du panier	✅
+Favoris persistants	✅
+Recherche de produits	✅
+Filtrage des produits	✅
+Tri des produits	✅
+Profil utilisateur	✅
+Riverpod uniquement	✅
+Plus de 5 providers	✅
+Architecture en couches	✅
+FutureProvider	✅
+StateProvider	✅
+NotifierProvider	✅
+AsyncNotifierProvider	✅
+Gestion du loading	✅
+Gestion des erreurs	✅
+Tests unitaires	✅
+Pipeline CI/CD (GitHub Actions)	✅
+
 👨‍💻 Auteur
 
 Projet réalisé dans le cadre d'un exercice de validation des compétences Flutter et Riverpod.
@@ -642,6 +712,7 @@ Flutter
 Dart
 Riverpod
 SharedPreferences
+
 ✅ Résultat attendu
 
 L'utilisateur doit pouvoir :
